@@ -18,7 +18,7 @@ def mis_contactos():
         print("4. Eliminar un contacto")
         print('5. salir')
 
-        option = input('\nseleccione una opcion: ')
+        option = int(input('seleccione una opcion: '))
 
         match option:
             case 1:
@@ -28,7 +28,7 @@ def mis_contactos():
                     contactos[name] = phone
                 print('el contacto se agrego correctamente')
             case 2:
-                name = input('ingrese el nombre del contacto a buscar')
+                name = input('ingrese el nombre del contacto a buscar: ')
                 name in contactos
                 print(f'El numero de telefono de {name} es {contactos[name]}. ')
             case 3:
