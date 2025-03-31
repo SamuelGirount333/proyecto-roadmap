@@ -22,15 +22,15 @@ def function_a(function_b):
     def function_c():
         print('>>> Antes de la ejecucion')
         function_b()
-        print('>>> Antes de la ejecucion')
+        print('>>> Despues de la ejecucion')
     
     return function_c
 
 
 # Decorar una funcion 
 '''
-Para hacer uso de un decorador usamo el @ para llamar la 
-ejecucion de el decorador acompanado de la funcion que queremos decorar
+Para hacer uso de un decorador usamos el @ para llamar la 
+ejecucion de el decorador acompanando de la funcion que queremos decorar
 '''
 
 @function_a 

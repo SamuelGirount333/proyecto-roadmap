@@ -26,9 +26,27 @@ en este caso concreto el objeto es persona
 """
 
 class Person:
-    def __init__(self, name, surname):
-        self.name = name
-        self.surname = surname
+    def __init__(self, name, surname, alias="Sin alias"):
+        self.full_name = f"{name} {surname} ({alias})"  # Propiedad pública
+        self.__name = name  # Propiedad privada
 
-my_person = Person('samuel','gomez')
-print(f"{my_person.name} {my_person.surname}")
+    def get_name(self):
+        return self.__name
+
+    def walk(self):
+        print(f"{self.full_name} está caminando")
+
+
+my_person = Person("samuel;", "Gomez")
+print(my_person.full_name)
+print(my_person.get_name())
+my_person.walk()
+
+my_other_person = Person("Samuel", "Gomez", "Sam-Sam")
+print(my_other_person.full_name)
+my_other_person.walk()
+my_other_person.full_name = "Hugo Hernan Hernadez Henao "
+print(my_other_person.full_name)
+
+my_other_person.full_name = 666
+print(my_other_person.full_name)
